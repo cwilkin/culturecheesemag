@@ -1,0 +1,70 @@
+@mixin clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020"; 
+    display: block; 
+    height: 0; 
+    overflow: hidden; 
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix, .group{
+  @include clearfix;
+}
+
+@mixin navigation-list {
+  list-style-type:none;
+  padding:0;
+  margin:0 auto;
+  overflow:hidden;
+  > li{
+    display:inline-block;
+    text-align:center;
+    padding-right:1em;
+    font-size: 1.3em;
+    
+    &:last-child{
+      padding-right:0px;
+    }
+  }
+}
+
+@mixin inline-list {
+  list-style-type:none;
+  padding:0;
+  margin:0 auto;
+  overflow:hidden;
+  >li {
+    float: left;
+    }
+}
+
+@mixin link-list {
+  list-style-type:none;
+  margin:0 auto;
+  overflow:hidden;
+  text-align:center;
+    >li {
+    display:inline-block;
+    padding: 0 1em;
+    }
+    &:first-child {
+      padding: 0 1em 0 0;
+    }
+
+}
+
+@mixin hide-text{
+  overflow:hidden;
+  text-indent:-9000px;
+  display:block;
+}
+
+@mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #CCC) {
+  -webkit-box-shadow: $horizontal $vertical $blur $color;
+  -moz-box-shadow: $horizontal $vertical $blur $color;
+  box-shadow: $horizontal $vertical $blur $color;
+  }

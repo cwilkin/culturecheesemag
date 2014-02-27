@@ -1,0 +1,58 @@
+// Text links
+a{
+	color:$orange;
+  text-decoration:none;
+	&:hover,&:focus{
+		text-decoration: underline;
+	}
+}
+
+// Default button
+.btn{
+  @include border-radius($btn-br);
+  background:$orange;
+  border-bottom: 1px $dark-orange solid;
+  border-right: 1px $dark-orange solid;
+  color:#fff;
+  text-decoration:none;
+  display:inline-block;
+  line-height:1;
+  padding:10px 20px;
+  text-transform: capitalize;
+  outline:none;
+  &:hover,&:focus{
+    background:darken($orange,8);
+    text-decoration: none;  }
+}
+
+// Primary action button
+.btn-primary{
+  @extend .btn;
+  background:$orange;
+  border-color:darken($orange,10);
+  &:hover,&:focus{
+    background:darken($orange,3);
+  }
+  &:active{
+
+  }
+}
+
+// Link button - a button that looks like a link
+.btn-link{
+  @extend .btn;
+  color:$orange;
+  background:transparent;
+  border:none;
+  text-shadow:none;
+  text-transform:none;
+  @include box-shadow(none);
+  &:hover,&:focus{
+  	text-decoration:underline;
+    background:transparent;
+  	@include box-shadow(none);
+  }
+  &:active{
+
+  }
+}

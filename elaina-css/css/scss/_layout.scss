@@ -1,0 +1,421 @@
+// Main layout styles go here
+
+body {
+	background-color: #f2f2f2;
+}
+
+// Header
+
+header.global {
+	position: fixed;    
+	z-index: 10;
+	background-color:#fff;
+	width:100%;
+	display: block;
+	@include box-shadow(-1px, 1px, 8px, #CCC);
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+header img.cow{
+	float: left;
+	@media screen and (max-width: 450px) {
+		display:none;
+	}
+}
+
+a.logo {
+	background: url(../img/logo.svg) no-repeat;
+	width:100%;
+	max-width:263px;
+	height:62px;
+	@include hide-text;
+	float: left;
+	margin-top:.5em;
+	@media screen and (max-width: 450px) {
+		padding-bottom:1em;
+	}
+}
+
+// Navigation
+nav {
+	text-align: center;
+	padding-top:2.3em;
+	float:right;
+	@media screen and (max-width: 975px) {
+		padding-top:0;
+		clear:both;
+		float: none;
+		padding-bottom:.5em;
+		font-size:.7em;
+	}
+}
+
+
+nav ul {
+	@include navigation-list;
+}
+
+nav ul li a {
+	font-weight: $medium;
+}
+
+// Search
+.global-search {
+	display:block;
+
+	input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+	border:none;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	border: none;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-bottom: 1px #eee solid;
+	
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+}
+
+
+// Main
+
+.content-push {
+margin-top: 96px;
+padding-top:20px;
+@include clearfix;
+}
+
+.main-column {
+	
+}
+
+.right-rail {
+	float: right;
+
+}
+
+// Carousel
+#main-carousel {
+	margin-bottom: 3em;
+	background-color:#eee;
+	border-bottom: 1px #999 solid;
+}
+.hero-info {
+	padding:0 1em;
+}
+
+//Feature Post
+.feature-post {
+	padding-bottom: 7em;
+	img {
+		float:right;
+		padding: 0 0 1em 1em;
+		@media screen and (max-width: 450px) {
+        clear:both;
+        float: none;
+        padding-left: 0;
+    }
+	}
+	ul {
+		clear:both;
+		@include inline-list;
+	}
+	li {
+		margin-left:0;
+		padding-right: 1.5em;
+
+	}
+
+}
+
+.overline {
+	display:block;
+	text-transform: uppercase;
+	color:$orange;
+	font-weight:$bold;
+	font-size:.8em;
+	letter-spacing: .1em;
+	margin-bottom: 1em;
+}
+
+a.keep-reading{
+	&:after{
+		content:'\00a0\2192';
+	}
+}
+
+ul.secondary-posts {
+	clear:both;
+	margin-top:3em;
+	font-size:.9em;
+	border-top: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+	padding: 1.5em 0;
+	img {
+		float: left;
+		padding: 0 5% 0 0;
+	}
+	li {
+		width:31%;
+		padding-right:1.3%;
+		padding-left: 1.3%;
+		border-right: 1px #ccc solid;
+				 @media screen and (max-width: 975px) {
+		        	float: none;
+		        	clear:both;
+		        	width:100%;
+		        	border-right: none;
+		        	img {
+		        		padding-bottom: 3em;
+
+		        	}
+		        }
+		&:last-child {
+			padding-right:0;
+			border-right: none;
+		}
+	}
+	.secondary-header {
+		display:block;
+		font-weight: $bold;
+	}
+}
+
+
+//Right right-rail
+
+.rail-content-mod {
+	border: 1px #ccc solid;
+	margin-bottom: 4em;
+	text-align: center;
+	h2 {
+		text-align:center;
+		text-transform:uppercase;
+		background:$orange;
+		padding:.5em;
+		color: #fff;
+		font-size: .8em;
+		font-weight: $medium;
+		letter-spacing: .2em;
+		margin:0;
+	}
+}
+
+.link-list {
+	list-style-type: none;
+	padding:0;
+	margin:0;
+	li {
+		display: inline-block;
+		padding-right: 1em;
+	}
+}
+
+
+.rail-info-box {
+	padding: 1em;
+}
+
+.editors-pick {
+	text-align: left;
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	li {
+		border-bottom: 1px #ccc solid;
+		padding: 1em 0;
+		&:last-child {
+			border-bottom: none;
+			padding: 1em 0 0 0;
+		}
+	}
+	.header {
+		display: block;
+		font-weight: $bold;
+	}
+}
+
+.ad {
+	margin-bottom: 4em;
+	text-align:center;
+}
+
+.leaderboard {
+	text-align:center;
+	padding: 2em 0;
+	@media (max-width: 728px) {
+		display:none;
+	}
+}
+
+
+//Footer
+.culture-logo-mod {
+display: block;
+margin: -40px auto 20px;
+height: 50px;
+width: 50px;
+background-color: $orange;
+text-align: center;
+-webkit-border-radius: 80px;
+-moz-border-radius: 80px;
+-ms-border-radius: 80px;
+-o-border-radius: 80px;
+border-radius: 80px;
+border-color: $orange;
+padding:.5em;
+}
+
+.culture-logo-icon {
+	background: url(../img/cow-icon.svg) no-repeat;
+	@include hide-text;
+	width: 40px;
+height: 30px;
+margin: auto;
+background-position: 50% 50%;
+padding-top: .9em;
+}
+
+footer {
+	background-color: #f2f2f2;
+	border-top: 1px #666 solid;
+}
+
+ul.social-icons {
+	@include inline-list;
+	li {
+		padding-right: 6%;
+		padding-bottom:5%;
+		float: left;
+		&:hover {
+			opacity:.7;
+		}
+
+	}
+}
+
+.facebook-icon {
+	@include hide-text;
+	background: url(../img/facebook-icon.svg) no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.twitter-icon {
+	@include hide-text;
+	background: url(../img/twitter-icon.svg) no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.rss-icon {
+	@include hide-text;
+	background: url(../img/rss-icon.svg) no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.google-icon {
+	@include hide-text;
+	background: url(../img/google-icon.svg) no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.youtube-icon {
+	@include hide-text;
+	background: url(../img/youtube-icon.svg) no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.instagram-icon {
+	@include hide-text;
+	background: url(../img/instagram-icon.svg) no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.site-map ul {
+	float: left;
+	list-style-type: none;
+	margin:0;
+	padding:0 2em 0 0;
+	&:last-child {
+		padding:0;
+	}
+
+}
+
+footer img.cow {
+	float: right;
+}
+
+//Bubble
+
+.bubble 
+{
+position: relative;
+width: 70%;
+height: auto;
+min-height:120px;
+padding: 0px;
+background: #d3511d;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 11px 0 11px 15px;
+border-color: transparent #d3511d;
+display: block;
+width: 0;
+z-index: 1;
+right: -15px;
+top: 74px;
+}
+
+.bubble p {
+	padding: 1em;
+	text-align: center;
+	font-weight: $bold;
+	color: #fff;
+}
+
