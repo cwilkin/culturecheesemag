@@ -6,44 +6,48 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" type="text/css" media="all" href="css/owl.carousel.css">
-  <link rel="stylesheet" type="text/css" media="all" href="css/owl.theme.css">
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-  <link rel="stylesheet" href="css/responsive-nav.css">
-<script src="js/responsive-nav.js"></script>
 <script type="text/javascript" src="//use.typekit.net/iyp8ejy.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+     
+     
+    <!-- Include js plugin -->
+    <script src="js/owl.carousel.js"></script>
 </head>
 
 <body>
-  <header class="global">
-      <h1>
-      	<img class="cow" src="img/cow.png" alt="">
-      	<a class="logo" href="#">Culture</a></h1> 
-      <nav class="nav-collapse">
-        <ul>
-          <li><a href="#">eat</a></li>
-          <li><a href="#">make</a></li>
-          <li><a href="#">buy</a></li>
-          <li><a href="#">cheese 101</a></li>
-          <li><a href="#">read</a></li>
-          <li><a href="#">look</a></li>
-          <li><a href="#">go</a></li>
-          <li>
-      <form class="global-search">
+  <header class="full-col">
+      
+<nav class="global">
+<ul class="navigation">
+<li id="close"><a href="#">Close</a></li>
+<li><a href="#">eat</a></li>
+<li><a href="#">make</a></li>
+<li><a href="#">buy</a></li>
+<li><a href="#">cheese 101</a></li>
+<li><a href="#">look</a></li>
+<li><a href="#">go</a></li>
+<li><form class="global-search">
       <input type="search" placeholder="search">
-  </form>
-          </li>
-        </ul>
-      </nav>
+  </form></li>
+</ul>
+</nav>
+<div id="push"> <a href="#"></a> </div>
+<h1>
+<a class="logo" href="#">Culture</a></h1>
+
+            
 
       
     </header>
 
   
 
-<div class="container content-push">
+<div class="container" role="main">
+  <div class="content-push">
+    <div class="container-grid">
       
 	          	<article class="leaderboard">
 
@@ -52,29 +56,129 @@
           		<img src="img/leaderboard.jpg" alt="big-ad">
           </article>
 
-        <section class="main-column col-main">
-
-
-      <div id="main-carousel" class="owl-carousel">
-      <div>
-      	<img src="img/cheese-hero1.jpg">
-      	<div class="hero-info">
-      		<h1>The Year's Best Cheeses</h1>
-      		<p>Blue ribbon, gold medal, first place: these cheeses take top honors at competitions around the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutru. <a class="keep-reading" href="#">Keep reading</a></p>
-      	</div>
-      </div>
-      <div><img src="img/cheese-hero1.jpg"></div>
-      <div><img src="img/cheese-hero1.jpg"></div>
-    </div>
-
     
 
-<script type="text/javascript">
-$(function(){
-  $('#main-carousel').owlCarousel({items:1});
-});
 
-</script>
+
+          <div class="feature-slider">
+    <div id="owl-features" class="owl-carousel owl-theme">
+    <div class="featurette"><a href="#"><img src="img/cheese-minicarousel.jpg">
+      <p>Dek goes right here just like this right here</p></a>
+    </div>
+    <div class="featurette"><a href="#"><img src="img/cheese-minicarousel.jpg">
+      <p>Dek goes right here just like this right here</p></a>
+    </div>
+    <div class="featurette"><a href="#"><img src="img/cheese-minicarousel.jpg">
+      <p>Dek goes right here just like this right here</p></a>
+    </div>
+    <div class="featurette"><a href="#"><img src="img/cheese-minicarousel.jpg">
+      <p>Dek goes right here just like this right here</p></a>
+    </div>
+    <div class="featurette"><a href="#"><img src="img/cheese-minicarousel.jpg">
+      <p>Dek goes right here just like this right here</p></a>
+    </div>
+    <div class="featurette"><a href="#"><img src="img/cheese-minicarousel.jpg">
+      <p>Dek goes right here just like this right here</p></a>
+    </div>
+    <div class="featurette"><a href="#"><img src="img/cheese-minicarousel.jpg">
+      <p>Dek goes right here just like this right here</p></a>
+    </div>
+    <div class="featurette"><a href="#"><img src="img/cheese-minicarousel.jpg">
+      <p>Dek goes right here just like this right here</p></a>
+    </div>
+    <div class="featurette"><a href="#"><img src="img/cheese-minicarousel.jpg">
+      <p>Dek goes right here just like this right here</p></a>
+    </div>
+
+
+</div>
+    </div>
+              <script>
+    $(document).ready(function() {
+
+      //Sort random function
+      function random(owlSelector){
+        owlSelector.children().sort(function(){
+            return Math.round(Math.random()) - 0.5;
+        }).each(function(){
+          $(this).appendTo(owlSelector);
+        });
+      }
+
+      $("#owl-features").owlCarousel({
+        navigation: true,
+        navigationText: [
+        "<a class='carousel-prev2'></a>",
+        "<a class='carousel-next2'></a>"
+        ],
+        //Call beforeInit callback, elem parameter point to $("#owl-demo")
+        beforeInit : function(elem){
+          random(elem);
+        }
+
+      });
+
+    });
+    </script>
+
+
+        <section class="main-column col-main">
+
+   
+
+    <div id="owl-demo" class="main-carousel owl-theme">
+    <div><img src="img/cheese-hero1.jpg">
+          <div class="hero-info">
+            <h1>The Year's Best Cheeses</h1>
+            <p>Blue ribbon, gold medal, first place: these cheeses take top honors at competitions around the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutru. <a class="keep-reading" href="#">Keep reading</a></p>
+          </div>
+    </div>
+    <div><img src="img/cheese-hero1.jpg"></div>
+    <div><img src="img/cheese-hero1.jpg"></div>
+    <div><img src="img/cheese-hero1.jpg"></div>
+    <div><img src="img/cheese-hero1.jpg"></div>
+
+
+    </div>
+
+
+
+ <!-- Demo -->
+
+ 
+
+
+    <script>
+    $(document).ready(function() {
+
+      //Sort random function
+      function random(owlSelector){
+        owlSelector.children().sort(function(){
+            return Math.round(Math.random()) - 0.5;
+        }).each(function(){
+          $(this).appendTo(owlSelector);
+        });
+      }
+
+      $("#owl-demo").owlCarousel({
+        singleItem:true,
+        navigation: true,
+        navigationText: [
+        "<a class='carousel-prev'></a>",
+        "<a class='carousel-next'></a>"
+        ],
+        //Call beforeInit callback, elem parameter point to $("#owl-demo")
+        beforeInit : function(elem){
+          random(elem);
+        }
+
+      });
+
+    });
+    </script>
+
+
+
 
          
           <article class="feature-post">
@@ -190,7 +294,7 @@ $(function(){
 
         </section>
 
-        <section class="right-rail col-rail">
+        <section class="col-rail">
         	<article class="rail-content-mod">
             <h2>Get the magazine</h2>
             <div class="rail-info-box">
@@ -277,12 +381,14 @@ $(function(){
          
         </section>
     </div>
+  </div>
+</div>
 
     <footer>
     	<a class="culture-logo-mod" href="/">
     		<h3 class="culture-logo-icon">Culture Cheese Magazine</h3>
     	</a>
-<div class="footer-container">
+      <div class="footer-container">
         <section class="footer-row">
         <article class="footer-col">
     		<h2>About Us</h2>
@@ -351,12 +457,23 @@ $(function(){
       </article>
     </section>
 
+</div>
 
-    	</div>
     </footer>
-
     <script>
-  var nav = responsiveNav(".nav-collapse");
+$(document).ready(function () {
+$('#push, #close').click(function () {
+var $navigacia = $('body, .global'),
+val = $navigacia.css('left') === '200px' ? '0px' : '200px';
+$navigacia.animate({
+left: val
+}, 300)
+});
+});
 </script>
+
+
+
+
 </body>
 </html>

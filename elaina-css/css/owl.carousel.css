@@ -1,6 +1,6 @@
 /* 
  * 	Core Owl Carousel CSS File
- *	v1.18
+ *	v1.3.2
  */
 
 /* clearfix */
@@ -17,34 +17,34 @@
 	display: none;
 	position: relative;
 	width: 100%;
-
-
-}
-
-#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
+	-ms-touch-action: pan-y;
 }
 .owl-carousel .owl-wrapper{
 	display: none;
 	position: relative;
 	-webkit-transform: translate3d(0px, 0px, 0px);
-	-webkit-perspective: 1000;
 }
 .owl-carousel .owl-wrapper-outer{
 	overflow: hidden;
 	position: relative;
 	width: 100%;
 }
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
 .owl-carousel .owl-item{
 	float: left;
 }
-.owl-controlls .owl-page,
-.owl-controlls .owl-buttons div{
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
 	cursor: pointer;
 }
-.owl-controlls {
+.owl-controls {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
@@ -64,4 +64,8 @@
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility:    hidden;
 	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
 }
+

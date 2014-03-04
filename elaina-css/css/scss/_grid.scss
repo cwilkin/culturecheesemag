@@ -1,71 +1,85 @@
-// 12 Column fluid and responsive grid
+// Susy grid
 
-.container{
-	max-width: 1141px;
-	margin: 0 auto;
-	padding: 0 3%;
-    background-color: #fff;
+@import "susy";
+
+// Configuring Susy defaults
+$total-columns: 14;
+$column-width: 4rem;
+$gutter-width: 1rem;
+$grid-padding: 0;
+
+// default magic
+$container-style: magic;
+
+// set true to allow the use of susy grid background
+$show-grid-backgrounds: false;
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color:#fff;
+    padding: 0 1em;
+    transition: margin .3s ease-in-out;
+              @media screen and (max-width: 960px) {
+        max-width: 750px;
+
+    }
 }
 
-.footer-container {
-    @extend .container;
-    background-color:#f2f2f2;
+.container-grid {
+  @include susy-grid-background;
+    overflow: hidden;
+  @include clearfix;
+
 }
+
 .col-main {
-    width: 64.5%;
-    float: left;
-    @media screen and (max-width: 975px) {
-        width: 100%;
-        clear:both;
+    @include span-columns (9);
+    margin: 0 auto;
+    @media screen and (max-width: 960px) {
+        @include span-columns (14);
     }
 }
+
 .col-rail {
-    width: 300px;
-    float:left;
-    margin:0;
-        @media screen and (max-width: 975px) {
-        width: 100%;
-        clear:both;
+   @include span-columns (4 omega);
+   min-width: 300px;
+   @media screen and (max-width: 960px) {
+        @include span-columns (14);
+        min-width: 50%;
     }
 }
+
+.feature-slider {
+    width: 100%;
+    max-width: 1200px;
+}
+    
 
 .footer-col {
     width: 30%;
+    padding-right:3%;
     float: left;
-    margin-right: 5%;
-    margin-bottom: 10%;
-    &:last-child{
-        margin-right:0;
+    &:last-child {
+        padding-right:0;
     }
-   @media (max-width: 750px) {
-            width: 100%;
-            float: none;
-            clear:both;
-        }
-}
-
-// Grid columns are stacked until the display size is greater than min-width
-
-@media (min-width: 750px) {
-
-    $unit: 6.2056333%; // Width of each grid column unit
-    $margin: 2.1277%; // Margin between the grid columns
-
-    .group {
-        margin-left: -$margin;
-    }
-
-    .span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11{
-        float: left;
-        margin-left: $margin;
-        margin-bottom: 0;
-        @include box-sizing(border-box);
-    }
-
-    @for $i from 1 through 12 {
-        .span#{$i} {
-            width: ($unit * $i) + ($margin * ($i - 1));
+    @media screen and (max-width: 960px) {
+        width:100%;
+        clear:both;
+        &:last-child {
+            padding-top:2em;
         }
     }
-
 }
+
+.footer-row {
+    clear:both;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+

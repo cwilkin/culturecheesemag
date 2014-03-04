@@ -6,7 +6,7 @@ body {
 
 // Header
 
-header.global {
+header.full-col {
 	position: fixed;    
 	z-index: 10;
 	background-color:#fff;
@@ -16,55 +16,125 @@ header.global {
 	top: 0;
 	right: 0;
 	left: 0;
+	height: 65px;
+			 @media screen and (min-width: 960px) {
+			 	height: 95px;
+			 }
+
 }
 
-header img.cow{
-	float: left;
-	@media screen and (max-width: 450px) {
-		display:none;
-	}
+header h1 {
+	padding-top: .2em;
+
 }
 
 a.logo {
-	background: url(../img/logo.svg) no-repeat;
+	background: url(../img/culture-logo.png) no-repeat;
 	width:100%;
-	max-width:263px;
-	height:62px;
+	max-width:173px;
+	height:42px;
 	@include hide-text;
-	float: left;
-	margin-top:.5em;
-	@media screen and (max-width: 450px) {
-		padding-bottom:1em;
+	margin: 0 auto;
+		 @media screen and (min-width: 960px) {
+		 background: url(../img/culture-logo-big.png) no-repeat;
+	    float: left;
+	    max-width: 306px;
+	    height: 88px;
 	}
 }
 
 // Navigation
-nav {
-	text-align: center;
-	padding-top:2.3em;
-	float:right;
-	@media screen and (max-width: 975px) {
-		padding-top:0;
-		clear:both;
-		float: none;
-		padding-bottom:.5em;
-		font-size:.7em;
+nav.global {
+margin-left: -200px;
+left: 0;
+width: 200px;
+background: #222;
+position: fixed;
+height: 100%;
+overflow-y: auto;
+z-index: 1000;
+color: #fff;
+font-weight: $normal;
+font-size: 1em;
+	@media screen and (min-width: 960px) {
+		margin: 0;
+		float: right;
+		background: none;
+		overflow-y: normal;
+		position: static;
+		width: auto;
+		padding-right: .5em;
+		padding-top: 1.2em;
 	}
+
 }
 
+#close {
+	@media screen and (min-width: 960px) {
+		display: none;
+	}
 
-nav ul {
-	@include navigation-list;
+}
+.navigation {
+position: absolute;
+top: 0;
+width: 200px;
+list-style: none;
+margin: 0;
+padding: 0;
+@media screen and (min-width: 960px) {
+	width: 100%;
+	position: static;
+}
+}
+.navigation li {
+line-height: 15px;
+text-indent: 20px;
+	@media screen and (min-width: 960px) {
+		display: inline-block;
+		}
+}
+.navigation li a {
+color: #999;
+display: block;
+padding: 20px 0;
+text-decoration: none;
+-webkit-transition: all .3s ease-out;
+-moz-transition: all .3s ease-out;
+-o-transition: all .3s ease-out;
+transition: all .3s ease-out;
+@media screen and (min-width: 960px) {
+	color:$orange;
+	padding: 0;
+}
+}
+.navigation li a:hover {
+color: #fff;
+background: #333;
+text-decoration: none;
+padding-left: 10px;
+@media screen and (min-width: 960px) {
+	color:$orange;
+	background: none;
+	padding-left:0;
+	text-decoration: underline;
+}
+}
+.navigation li a:active, .navigation li a:focus {
+text-decoration: none
 }
 
-nav ul li a {
-	font-weight: $medium;
+#close a {
+	background-color:$orange;
+	text-transform: uppercase;
+	color:#222;
 }
+
 
 // Search
 .global-search {
 	display:block;
-
+	padding-top: 1em;
 	input {
 	outline: none;
 }
@@ -84,15 +154,16 @@ input::-webkit-search-cancel-button {
 input[type=search] {
 	background: url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
 	padding: 9px 10px 9px 32px;
-	width: 55px;
+	width: 130px;
 	border: none;
+	background-color: #fff;
 	
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
 	transition: all .5s;
 }
 input[type=search]:focus {
-	width: 130px;
+	width: 150px;
 	background-color: #fff;
 	border-bottom: 1px #eee solid;
 	
@@ -112,28 +183,88 @@ input::-webkit-input-placeholder {
 // Main
 
 .content-push {
-margin-top: 96px;
-padding-top:20px;
-@include clearfix;
-}
-
-.main-column {
-	
-}
-
-.right-rail {
-	float: right;
+	padding-top: 7em;
 
 }
+
 
 // Carousel
-#main-carousel {
-	margin-bottom: 3em;
-	background-color:#eee;
-	border-bottom: 1px #999 solid;
+    #owl-demo .item{
+      display: block;
+      padding: 30px 0px;
+      margin: 5px;
+      color: #FFF;
+ 
+    }
+
+
+
+
+    /*To move navigation buttons outside use these settings:*/
+    .main-carousel {
+    	background-color:#eee;
+    	max-width:750px;
+    	border-bottom: 1px #ccc solid;
+    	margin-bottom: 7em;
+    }
+
+    .owl-theme .owl-controls .owl-buttons div {
+      position: absolute;    }
+
+    .owl-theme .owl-controls .owl-buttons .owl-prev{
+      left: 0;
+      top: 15%;
+
+
+
+    }
+
+    .owl-theme .owl-controls .owl-buttons .owl-next{
+      right: 0;
+      top: 15%;
+
+
+    }
+
+    a.carousel-prev:hover, a.carousel-next:hover {
+    	text-decoration: none;
+    }
+
+
+.feature-slider .owl-theme .owl-controls .owl-buttons .owl-next{
+	right: 0;
+	top:0;
 }
+
+.feature-slider .owl-theme .owl-controls .owl-buttons .owl-prev{
+	left: 0;
+	top:0;
+}
+
+
 .hero-info {
 	padding:0 1em;
+	      background-color:#eee;
+}
+.feature-slider {
+		border-top: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+	padding: 1em 0;
+	margin-bottom: 2em;
+}
+
+.feature-slider img {
+	float: left;
+	padding: 0 .5em .5em 0;
+}
+
+.feature-slider a p {
+	font-size: .8em;
+
+}
+
+.featurette {
+	padding: 0 3em;
 }
 
 //Feature Post
@@ -231,6 +362,7 @@ ul.secondary-posts {
 		letter-spacing: .2em;
 		margin:0;
 	}
+
 }
 
 .link-list {
@@ -270,6 +402,7 @@ ul.secondary-posts {
 .ad {
 	margin-bottom: 4em;
 	text-align:center;
+	clear: both;
 }
 
 .leaderboard {
@@ -389,6 +522,7 @@ footer img.cow {
 {
 position: relative;
 width: 70%;
+max-width:300px;
 height: auto;
 min-height:120px;
 padding: 0px;
@@ -396,6 +530,7 @@ background: #d3511d;
 -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px;
+float:right;
 }
 
 .bubble:after 
