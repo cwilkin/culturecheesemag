@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//use.typekit.net/iyp8ejy.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script src="js/modernizr.js"></script>
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+     
+     
+    <!-- Include js plugin -->
+    <script src="js/owl.carousel.js"></script>
+</head>
+
+<body class="no-touch">
+
+
+
+
+  <header class="full-col">
+      
+<nav id="slide-menu">
+<ul class="navigation">
+<li id="close"><a href="#">Close</a></li>
+<li><a href="#">eat</a></li>
+<li><a href="#">make</a></li>
+<li><a href="#">buy</a></li>
+<li><a href="#">cheese 101</a></li>
+<li><a href="#">look</a></li>
+<li><a href="#">go</a></li>
+<li><form class="global-search">
+      <input type="search" placeholder="search">
+  </form></li>
+</ul>
+</nav>
+<div id="push"> <a href="#"></a> </div>
+<h1>
+<a class="logo" href="#">Culture</a></h1>
+
+    <script>
+$(document).ready(function () {
+$('#push, #close, #push').click(function () {
+  console.log($('body, #slide-menu').css('left'));
+var $navigacia = $('body, #slide-menu'),
+val = $navigacia.css('left') === '200px' ? '0px' : '200px';
+$navigacia.animate({
+left: val
+}, 300)
+});
+});
+</script>
+            
+
+      
+    </header>
+
+  
+
+<div class="container" role="main">
+  <div class="content-push">
+    <div class="container-grid">
+      
+	          	<article class="leaderboard">
+
+
+
+          		<img src="img/leaderboard.jpg" alt="big-ad">
+          </article>
+
+    
+
+
+
+         
+
+
+        <section class="main-column col-main">
+
+   
+
+    <form method="get">
+<div class="cheeseRetailers_filters">
+<div><span class="overline">Shop name</span> <input type="text" name="filter[name]" value="" />
+</div>
+<div>
+<span class="overline">Retailers in</span>
+<input type="text" name="filter[city]" placeholder="City" value="" />
+<select class="btn" name="filter[state]"><option>AK</option><option>AL</option><option>AR</option><option>AZ</option><option>CA</option><option>CO</option><option>CT</option><option>DC</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>IA</option><option>ID</option><option>IL</option><option>IN</option><option>KS</option><option>KY</option><option>LA</option><option>MA</option><option>MD</option><option>ME</option><option>MI</option><option>MN</option><option>MO</option><option>MS</option><option>MT</option><option>NC</option><option>ND</option><option>NE</option><option>NH</option><option>NJ</option><option>NM</option><option>NV</option><option>NY</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option><option>VA</option><option>VT</option><option>WA</option><option>WI</option><option>WV</option><option>WY</option></select><br />
+or within 
+<select class="btn" name="filter[within]" />
+<option>5</option><option>10</option><option>15</option><option>25</option><option>50</option><option>100</option></select>
+miles of zip code: <input type="text" name="filter[zip]" value="" />
+</div>
+<div><span class="overline">Shop Category</span> <select name="filter[category]" class="btn"><option value="0">View All Categories</option>
+<option value="2">CS - Cheese Shop</option><option value="3">N - Natural Foods Store</option><option value="4">G+ - Grocery Store with dedicated cheesemonger</option><option value="5">G - Grocery Store</option><option value="6">R - Restaurant/cafe/bar</option><option value="7">SF - Specialty Food Shop</option><option value="8">S - Cheesemaking Supply Store</option><option value="9">CM+ - Cheesemaker selling own and others' cheeses</option><option value="10">CM - Cheesemaker selling own cheeses</option><option value="11">A - Alcohol (wine/beer/liquor) store</option></select>
+</div>
+<div>
+<input type="checkbox" value="1" name="attrFilter[]" /> - Offers cheeses cut and wrapped to order<br />
+<input type="checkbox" value="12" name="attrFilter[]" /> - Carries <strong>culture</strong> magazine<br />
+<input type="checkbox" value="9" name="attrFilter[]" /> - Carries wine and/or beer<br />
+</div>
+<input class="btn" type="submit" name="filterRetailers" value="Search" />
+</div>
+</form>
+
+
+<div class="cheeseRetailers_toolbar">
+<input class="btn" type="button" id="submitRetailer" value="Submit My Retailer Information" />
+</div>
+
+<div id="retailerSubmitForm" style="display: none;">
+<form method="post" enctype="multipart/form-data">
+<h1>Submit Retailer Info</h1>
+<h2>Shop info:</h2>
+<div>Shop Name<br /><span class="alert">*</span> <input type="text" name="shopName" required="1" /></div><div>Address<br /><span class="alert">*</span> <textarea name="address" required="1" ></textarea></div><div>City<br /><span class="alert">*</span> <input type="text" name="city" required="1" /></div><div>
+Country <span class="alert">*</span> <select name="country" id="country">
+<option>United States of America</option><option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>American Samoa</option><option>Andorra</option><option>Angola</option><option>Anguilla</option><option>Antigua and Barbuda</option><option>Argentina</option><option>Armenia</option><option>Aruba</option><option>Australia</option><option>Austria</option><option>Azerbaijan</option><option>Bahamas</option><option>The</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option><option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bermuda</option><option>Bhutan</option><option>Bolivia</option><option>Bosnia</option><option>Botswana</option><option>Bougainville</option><option>Brazil</option><option>British Indian Ocean</option><option>British Virgin Islands</option><option>Brunei</option><option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cambodia</option><option>Cameroon</option><option>Canada</option><option>Cape Verde Islands</option><option>Cayman Islands</option><option>Central African Republic</option><option>Chad</option><option>Chile</option><option>China</option><option>Hong Kong</option><option>China</option><option>Macau</option><option>China</option><option>People�s Republic</option><option>China</option><option>Taiwan</option><option>Colombia</option><option>Comoros</option><option>Congo</option><option>Democratic Republic of</option><option>Congo</option><option>Republic of</option><option>Cook Islands</option><option>Costa Rica</option><option>Cote d�Ivoire</option><option>Croatia</option><option>Cuba</option><option>Cyprus</option><option>Czech Republic</option><option>Denmark</option><option>Djibouti</option><option>Dominica</option><option>Dominican Republic</option><option>Ecuador</option><option>Egypt</option><option>El Salvador</option><option>Equatorial Guinea</option><option>Eritrea</option><option>Estonia</option><option>Ethiopia</option><option>Faeroe Islands</option><option>Falkland Islands</option><option>Federated States of Micronesia</option><option>Fiji</option><option>Finland</option><option>France</option><option>French Guiana</option><option>French Polynesia</option><option>Gabon</option><option>Gambia</option><option>The</option><option>Georgia</option><option>Germany</option><option>Ghana</option><option>Gibraltar</option><option>Greece</option><option>Greenland</option><option>Grenada</option><option>Guadeloupe</option><option>Guam</option><option>Guatemala</option><option>Guinea</option><option>Guinea-Bissau</option><option>Guyana</option><option>Haiti</option><option>Holy See (Vatican City State)</option><option>Honduras</option><option>Hungary</option><option>Iceland</option><option>India</option><option>Indonesia</option><option>Iran</option><option>Iraq</option><option>Ireland</option><option>Israel</option><option>Italy</option><option>Jamaica</option><option>Japan</option><option>Jordan</option><option>Kazakhstan</option><option>Kenya</option><option>Kiribati</option><option>Korea</option><option>Democratic People�s Rep</option><option>Korea</option><option>Republic of</option><option>Kosovo</option><option>Kuwait</option><option>Kyrgyzstan</option><option>Laos</option><option>Latvia</option><option>Lebanon</option><option>Lesotho</option><option>Liberia</option><option>Libya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Macedonia</option><option>Madagascar</option><option>Malawi</option><option>Malaysia</option><option>Maldives</option><option>Mali</option><option>Malta</option><option>Martinique</option><option>Mauritania</option><option>Mauritius</option><option>Mayotte</option><option>Mexico</option><option>Moldova</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Montserrat</option><option>Morocco Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nauru</option><option>Nepal</option><option>Netherlands</option><option>Netherlands Antilles</option><option>New Caledonia</option><option>New Zealand</option><option>Nicaragua</option><option>Niger</option><option>Nigeria</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Palestine</option><option>Panama</option><option>Papua New Guinea</option><option>Paraguay</option><option>Peru</option><option>Philippines</option><option>Poland</option><option>Portugal</option><option>Puerto Rico</option><option>Qatar</option><option>R�union</option><option>Romania</option><option>Russia</option><option>Rwanda</option><option>Saint Barthelemy</option><option>Saint Helena</option><option>Saint Kitts & Nevis</option><option>Saint Lucia</option><option>Saint Martin</option><option>Saint Pierre & Miquelon</option><option>Saint Vincent</option><option>Samoa</option><option>San Marino</option><option>Sao Tom� & Principe</option><option>Saudi Arabia</option><option>Senegal</option><option>Serbia</option><option>Seychelles</option><option>Sierra Leone</option><option>Singapore</option><option>Slovakia</option><option>Slovenia</option><option>Solomon Islands</option><option>Somalia</option><option>South Africa</option><option>Spain</option><option>Sri Lanka</option><option>Sudan</option><option>Suriname</option><option>Swaziland</option><option>Sweden</option><option>Switzerland</option><option>Syria</option><option>Tajikistan</option><option>Tanzania</option><option>Thailand</option><option>Timor Leste</option><option>Togo</option><option>Tokelau Islands</option><option>Tonga</option><option>Trinidad & Tobago</option><option>Tunisia</option><option>Turkey</option><option>Turkmenistan</option><option>Turks & Caicos Islands</option><option>Tuvalu</option><option>Uganda</option><option>Ukraine</option><option>United Arab Emirates</option><option>United Kingdom of GB & NI</option><option>Uruguay</option><option>US Virgin Islands</option><option>Uzbekistan</option><option>Vanuatu</option><option>Venezuela</option><option>Vietnam</option><option>Wallis & Futuna Islands</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option></select>
+</div>
+<div>
+State/Province <span class="alert">*</span> <select name="state" id="state">
+<option>AK</option><option>AL</option><option>AR</option><option>AZ</option><option>CA</option><option>CO</option><option>CT</option><option>DC</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>IA</option><option>ID</option><option>IL</option><option>IN</option><option>KS</option><option>KY</option><option>LA</option><option>MA</option><option>MD</option><option>ME</option><option>MI</option><option>MN</option><option>MO</option><option>MS</option><option>MT</option><option>NC</option><option>ND</option><option>NE</option><option>NH</option><option>NJ</option><option>NM</option><option>NV</option><option>NY</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option><option>VA</option><option>VT</option><option>WA</option><option>WI</option><option>WV</option><option>WY</option></select>
+<input id="province" name="province" style="display: none;" type="text" />
+</div>
+<div>Postal Code<br /><span class="alert">*</span> <input type="text" name="postalCode" required="1" /></div><div>Phone Number (xxx-xxx-xxxx)<br /><span class="alert">*</span> <input type="text" name="phone" required="1" /></div><div>Website<br /><input type="text" name="website" /></div><div>Shop Hours<br /><span class="alert">*</span> <input type="text" name="hours" required="1" /></div><div>
+Business type <select name="businessType">
+<option value="2">CS - Cheese Shop</option><option value="3">N - Natural Foods Store</option><option value="4">G+ - Grocery Store with dedicated cheesemonger</option><option value="5">G - Grocery Store</option><option value="6">R - Restaurant/cafe/bar</option><option value="7">SF - Specialty Food Shop</option><option value="8">S - Cheesemaking Supply Store</option><option value="9">CM+ - Cheesemaker selling own and others' cheeses</option><option value="10">CM - Cheesemaker selling own cheeses</option><option value="11">A - Alcohol (wine/beer/liquor) store</option><option value="0">Other</option></select>
+</div>
+
+<div>Please Upload a Photo of Your Shop<br /><input type="file" name="photo" /></div>
+<h2>Shop details:</h2>
+<div>
+<ul>
+<li><select name="attrs[]"><option value="0">No</option><option value="1">Yes</option></select> - Do you have a cut & wrap cheese counter?</li><li><select name="attrs[]"><option value="0">No</option><option value="2">Yes</option></select> - Do you employ a full-time cheesemonger?</li><li><select name="attrs[]"><option value="0">No</option><option value="3">Yes</option></select> - If you have a full-time cheesemonger, is he/she certified?</li><li><select name="attrs[]"><option value="0">No</option><option value="4">Yes</option></select> - Do you sell artisanal cheeses?</li><li><select name="attrs[]"><option value="0">No</option><option value="5">Yes</option></select> - Do you sell charcuterie or artisan deli meats?</li><li><select name="attrs[]"><option value="0">No</option><option value="6">Yes</option></select> - Do you sell produce?</li><li><select name="attrs[]"><option value="0">No</option><option value="7">Yes</option></select> - Do you sell specialty imports?</li><li><select name="attrs[]"><option value="0">No</option><option value="8">Yes</option></select> - Do you sell fine pastry or baked goods?</li><li><select name="attrs[]"><option value="0">No</option><option value="9">Yes</option></select> - Do you sell beer or wine?</li><li><select name="attrs[]"><option value="0">No</option><option value="10">Yes</option></select> - Do you sell gift baskets?</li><li><select name="attrs[]"><option value="0">No</option><option value="11">Yes</option></select> - Do you do mail or online ordering?</li><li><select name="attrs[]"><option value="0">No</option><option value="12">Yes</option></select> - Do you sell Culture?</li></ul>
+</div><div>
+Number of cheeses sold <select name="cheesesSold">
+<option value="2">1-7</option><option value="3">8-14</option><option value="4">15 or more</option></select>
+</div><div>
+Number of cheese producers you feature <select name="producers">
+<option value="1">1-14</option><option value="2">15 or more</option></select>
+</div>
+
+<h2>Submitter info:</h2>
+
+<div>Your Name<br /><span class="alert">*</span> <input type="text" name="name" required="1" /></div><div>Email Address<br /><span class="alert">*</span> <input type="text" name="email" required="1" /></div><div>Title<br /><input type="text" name="title" /></div><input type="hidden" name="action" value="addRetailer" />
+<div><input type="submit" name="submitRetailer" value="Submit" /> <input type="button" id="cancel" value="Cancel" /></div>
+</form>
+</section>
+
+        <section class="col-rail">
+        	<article class="rail-content-mod">
+            <h2>Get the magazine</h2>
+            <div class="rail-info-box">
+            <img src="img/magazines.jpg" alt="Culture Issues">
+            <ul class="link-list">
+            	<li><a href="#">Subscribe</a></li>
+            	<li><a href="#">Give</a></li>
+            	<li><a href="#">Renew</a></li>
+            </ul>
+        </div>
+          </article>
+
+          	<article class="ad">
+          		<img src="img/big-ad.jpg" alt="big-ad">
+          </article>
+
+          <article class="rail-content-mod">
+            <h2>Editor's Picks</h2>
+            <div class="rail-info-box">
+            <ul class="editors-pick">
+            	<li><a href="#"><span class="header">Editor’s pick goes here</span>
+            		Dek goes right here just like this
+					</a></li>
+
+					<li><a href="#"><span class="header">Editor’s pick goes here</span>
+            		Dek goes right here just like this
+					</a></li>
+
+					<li><a href="#"><span class="header">Editor’s pick goes here</span>
+            		Dek goes right here just like this
+					</a></li>
+
+					<li><a href="#"><span class="header">Editor’s pick goes here</span>
+            		Dek goes right here just like this
+					</a></li>
+
+					<li><a href="#"><span class="header">Editor’s pick goes here</span>
+            		Dek goes right here just like this
+					</a></li>
+
+            </ul>
+        </div>
+          </article>
+
+          <article class="rail-content-mod">
+            <h2>Current Culture Issue</h2>
+            <div class="rail-info-box">
+            <img src="img/culture-fall.jpg" alt="Fall Culture Issue">
+            <p><a class="keep-reading" href="#">Go to this issue</a></p>
+        </div>
+          </article>
+
+          <article class="ad">
+          		<img src="img/big-ad.jpg" alt="big-ad">
+          </article>
+
+          <article class="rail-content-mod">
+            <h2>Say "Cheese"</h2>
+            <div class="rail-info-box">
+           <!-- SnapWidget -->
+<iframe src="http://snapwidget.com/sl/?u=Y3VsdHVyZWNoZWVzZXxpbnwyODB8M3wzfHxub3wyMHxub25lfHx5ZXM=&v=27214" title="Instagram Widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:300px; height:300px"></iframe>
+<p><a href="http://instagram.com/culturecheese/">Follow us on Instagram</a></p>
+        </div>
+          </article>
+
+          <article class="rail-content-mod">
+          	 <h2>Sign up for cheese</h2>
+          	<div class="rail-info-box">
+            <p>Receive updates on all things cheese when you sign up for our newsletter.</p>
+            <a class="btn"href="#">Subscribe</a>
+        </div>
+          </article>
+
+          <article class="ad">
+          		<img src="img/big-ad.jpg" alt="big-ad">
+          </article>
+
+          <article class="rail-content-mod">
+            <h2>Find a Cheese Shop Near You</h2>
+            <div class="rail-info-box">
+           <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;max-height:300px;width:100%;"><div id="gmap_canvas" style="height:500px;width:600px;"></div><a class="google-map-code" href="http://www.embed-google-map.com/de/" id="get-map-data">google maps</a><iframe src="http://www.embed-google-map.com/map-embed.php"></iframe><a class="google-map-data" href="http://www.stromleo.de" id="get-map-data">homepage</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(42.3584308,-71.0597732),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(42.3584308, -71.0597732)});infowindow = new google.maps.InfoWindow({content:"<div style='position:relative;line-height:1.34;overflow:hidden;white-space:nowrap;display:block;'><div style='margin-bottom:2px;font-weight:500;'>Test</div><span> <br>  boston</span></div>" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+        </div>
+          </article>
+         
+        </section>
+    </div>
+  </div>
+</div>
+
+    <footer>
+    	<a class="culture-logo-mod" href="/">
+    		<h3 class="culture-logo-icon">Culture Cheese Magazine</h3>
+    	</a>
+      <div class="footer-container">
+        <section class="footer-row">
+        <article class="footer-col">
+    		<h2>About Us</h2>
+    		<p><a href="#">Culture: the word on cheese</a> is America's first and best mag devoted to the love of cheese. Profiles, recipes, wine, beer, and a community of readers always willing to help and chat.</p>
+      </article>
+
+      <article class="footer-col">
+        <h2>Our Mission</h2>
+        <p>With every issue you will discover the flavors and textures of great cheeses. You will learn about new cheeses and cheesemakers. You will read about the stories behind the cheeses you love. You will finally have a place to turn to satisfy your passion for all things cheese. </p>
+      </article>
+
+
+      <article class="footer-col">
+        <h2>Company Overview</h2>
+        <p>Culture, America's magazine for cheese lovers, delivers stories about cheeses, cheesemakers, travel to gorgeous cheese regions, and practical tips on buying, presenting, and cooking with cheese. </p>
+      </article>
+    </section>
+
+      <section class="footer-row">
+        <article class="footer-col">
+        <h2>Connect with Us</h2>
+        <ul class="social-icons">
+          <a href="#"><li class="facebook-icon">Facebook</li></a>
+          <a href="#"><li class="twitter-icon">Twitter</li></a>
+          <a href="#"><li class="rss-icon">RSS</li></a>
+          <a href="#"><li class="google-icon">Google</li></a>
+          <a href="#"><li class="youtube-icon">Youtube</li></a>
+          <a href="#"><li class="instagram-icon">Instagram</li></a>
+        </ul>
+      </article>
+
+      <article class="footer-col">
+        <h2>Get in Touch</h2>
+        <div class="site-map">
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Subscribe</a></li>
+          <li><a href="#">Cheese 101</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="#">Back Issues</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Newsletters</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="#">For Retailers</a></li>
+          <li><a href="#">For Advertisers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+
+      </article>
+
+
+      <article class="footer-col">
+                <img class="cow" src="img/cow-footer.png" alt="">
+                <div class="bubble">
+                    <p>
+                      The word on cheese 
+                    </p>
+                </div>
+      </article>
+    </section>
+
+</div>
+
+    </footer>
+<script>
+$('a').on('click touchend', function(e) {
+    var el = $(this);
+    var link = el.attr('href');
+    window.location = link;
+});
+</script>
+
+
+
+
+</body>
+</html>
