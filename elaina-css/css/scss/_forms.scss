@@ -4,6 +4,12 @@ form{
 	.item{
 		margin-bottom:$padding/2;
 	}
+
+	ul {
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
 	label{
 		display:block;
 		margin-bottom:5px;
@@ -22,6 +28,19 @@ form{
 			width:auto;
 		}
 	}
+
+	.cheeseRetailers_filters {
+		div {
+		padding-bottom: 2em;
+	}
+	select {
+		margin-bottom:1em;
+	}
+	input.btn {
+		margin-bottom:1em;
+	}
+}
+
 
 	// Notes go under the input fields
 	.note{
@@ -47,3 +66,49 @@ form{
 		}
 	}
 }
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+
+.library_alphabet a {
+	color: #fff;
+	background: #d9531e;
+	padding: .5em .8em;
+	margin: .5em;
+	float: left;
+}
+
+.current-alphabet-letter {
+	opacity: .5;
+	cursor: default;
+}
+
+ul.alphabet-list {
+	clear:both;
+	list-style-type:none;
+	padding:0;
+	margin-bottom: 2.5em;
+border-bottom: 1px solid #ccc;
+padding-bottom: 1.5em;
+}
+
+.library-search-fields {
+	li {
+		padding-bottom:2em;
+	}
+}
+
+.cheeseLibraryFilters {
+	li {
+	padding:0;
+
+}
+	div {
+		padding-bottom: 2em;
+	}
+}
+
+
+
+

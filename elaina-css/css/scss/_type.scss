@@ -13,6 +13,10 @@ $normal:400;
   font-style: normal;
 }
 
+#close {
+  cursor : pointer;
+}
+
 
 #close a:before {
   font-family:'icomoon';
@@ -21,12 +25,15 @@ $normal:400;
 }
 
 #push {
-  float: left;
-  padding-left: .5em;
+  float: right;
+  padding-right: .5em;
+  cursor : pointer; 
   @media screen and (min-width: 960px) {
     display: none;
   }
 }
+
+
 
 .owl-buttons a:hover {
   text-decoration: none;

@@ -37,6 +37,7 @@ $show-grid-backgrounds: false;
 .col-main {
     @include span-columns (9);
     margin: 0 auto;
+    margin-bottom: 2em;
     @media screen and (max-width: 960px) {
         @include span-columns (14);
     }

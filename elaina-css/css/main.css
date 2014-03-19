@@ -414,6 +414,7 @@ table {
   margin-right: 1.44928%;
   display: inline;
   margin: 0 auto;
+  margin-bottom: 2em;
 }
 @media screen and (max-width: 960px) {
   .col-main {
@@ -482,6 +483,10 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+#close {
+  cursor: pointer;
+}
+
 #close a:before {
   font-family: 'icomoon';
   content: "\e600";
@@ -489,8 +494,9 @@ table {
 }
 
 #push {
-  float: left;
-  padding-left: .5em;
+  float: right;
+  padding-right: .5em;
+  cursor: pointer;
 }
 @media screen and (min-width: 960px) {
   #push {
@@ -697,6 +703,11 @@ table th {
 form .item {
   margin-bottom: 20px;
 }
+form ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 form label {
   display: block;
   margin-bottom: 5px;
@@ -719,6 +730,15 @@ form input[type=text]:focus, form input[type=email]:focus, form input[type=phone
 form input[type=text].auto, form input[type=email].auto, form input[type=phone].auto, form input[type=password].auto, form input[type=number].auto, form input[type=search].auto, form textarea.auto {
   width: auto;
 }
+form .cheeseRetailers_filters div {
+  padding-bottom: 2em;
+}
+form .cheeseRetailers_filters select {
+  margin-bottom: 1em;
+}
+form .cheeseRetailers_filters input.btn, form .cheeseRetailers_filters input.btn-primary, form .cheeseRetailers_filters input.btn-link {
+  margin-bottom: 1em;
+}
 form .note {
   margin-top: 5px;
   color: #999999;
@@ -732,6 +752,43 @@ form .error .reason {
 }
 form .error input[type=text], form .error input[type=email], form .error input[type=phone], form .error input[type=password], form .error input[type=number], form .error input[type=search], form .error textarea {
   border-color: #ce0832;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+.library_alphabet a {
+  color: #fff;
+  background: #d9531e;
+  padding: .5em .8em;
+  margin: .5em;
+  float: left;
+}
+
+.current-alphabet-letter {
+  opacity: .5;
+  cursor: default;
+}
+
+ul.alphabet-list {
+  clear: both;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2.5em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.5em;
+}
+
+.library-search-fields li {
+  padding-bottom: 2em;
+}
+
+.cheeseLibraryFilters li {
+  padding: 0;
+}
+.cheeseLibraryFilters div {
+  padding-bottom: 2em;
 }
 
 .notification {
@@ -2772,7 +2829,7 @@ a.logo {
   }
 }
 
-nav.global {
+#slide-menu {
   margin-left: -200px;
   left: 0;
   width: 200px;
@@ -2786,7 +2843,7 @@ nav.global {
   font-size: 1em;
 }
 @media screen and (min-width: 960px) {
-  nav.global {
+  #slide-menu {
     margin: 0;
     float: right;
     background: none;
@@ -2913,6 +2970,10 @@ nav.global {
 
 .content-push {
   padding-top: 7em;
+  padding-bottom: 5em;
+}
+.content-push article {
+  margin-bottom: 4em;
 }
 
 #owl-demo .item {
@@ -2983,9 +3044,6 @@ a.carousel-prev:hover, a.carousel-next:hover {
   padding: 0 3em;
 }
 
-.feature-post {
-  padding-bottom: 7em;
-}
 .feature-post img {
   float: right;
   padding: 0 0 1em 1em;
@@ -3026,7 +3084,7 @@ a.keep-reading:after {
   content: '\00a0\2192';
 }
 
-ul.secondary-posts {
+ul.secondary-posts, ul.cheese-iq-posts {
   clear: both;
   margin-top: 3em;
   font-size: .9em;
@@ -3034,39 +3092,38 @@ ul.secondary-posts {
   border-bottom: 1px #ccc solid;
   padding: 1.5em 0;
 }
-ul.secondary-posts img {
+ul.secondary-posts img, ul.cheese-iq-posts img {
   float: left;
   padding: 0 5% 0 0;
 }
-ul.secondary-posts li {
+ul.secondary-posts li, ul.cheese-iq-posts li {
   width: 31%;
   padding-right: 1.3%;
   padding-left: 1.3%;
   border-right: 1px #ccc solid;
 }
 @media screen and (max-width: 975px) {
-  ul.secondary-posts li {
+  ul.secondary-posts li, ul.cheese-iq-posts li {
     float: none;
     clear: both;
     width: 100%;
     border-right: none;
   }
-  ul.secondary-posts li img {
+  ul.secondary-posts li img, ul.cheese-iq-posts li img {
     padding-bottom: 3em;
   }
 }
-ul.secondary-posts li:last-child {
+ul.secondary-posts li:last-child, ul.cheese-iq-posts li:last-child {
   padding-right: 0;
   border-right: none;
 }
-ul.secondary-posts .secondary-header {
+ul.secondary-posts .secondary-header, ul.cheese-iq-posts .secondary-header {
   display: block;
   font-weight: 700;
 }
 
 .rail-content-mod {
   border: 1px #ccc solid;
-  margin-bottom: 4em;
   text-align: center;
 }
 .rail-content-mod h2 {
@@ -3112,6 +3169,11 @@ ul.secondary-posts .secondary-header {
 .editors-pick .header {
   display: block;
   font-weight: 700;
+}
+
+.rail_info_box ul {
+  margin: 0;
+  padding: 0;
 }
 
 .ad {
@@ -3281,6 +3343,62 @@ footer img.cow {
   text-align: center;
   font-weight: 700;
   color: #fff;
+}
+
+.placeholder {
+  width: 100%;
+  background-color: #ccc;
+  height: 12em;
+}
+
+.culture-gear ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.culture-gear li {
+  float: left;
+  width: 28%;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+@media screen and (max-width: 450px) {
+  .culture-gear li {
+    width: 45%;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 60%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul.cheese-iq-posts {
+  border: none;
+  margin: 0;
+}
+ul.cheese-iq-posts li {
+  float: left;
+}
+
+blockquote {
+  border-left: 3px solid #d9531e;
+  margin: 0;
+  padding-left: 1em;
+  font-size: 1.5em;
+  font-style: italic;
 }
 
 @media screen and (max-width: 480px) {
